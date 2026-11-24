@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACCESS GRANTED</title>
+<style>
+body {
+  background: #080b0d;
+  color: #55e68a;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+#screen { padding: 20px; }
+h1 { font-size: 30px; }
+#message {
+  display: none;
+  color: white;
+  font-size: 38px;
+  margin-top: 40px;
+  animation: appear 2s ease;
+}
+.heart { color: #f05b78; }
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+</head>
+<body>
+<div id="screen">
+  <h1>ACCESS GRANTED</h1>
+  <p id="status">Decrypting final message...</p>
+  <div id="message">
+    VOLIM TE.<br>
+    <span class="heart">♥</span>
+  </div>
+</div>
+<script>
+setTimeout(function() {
+  document.getElementById("status").innerText =
+  "DECRYPTION COMPLETE.";
+  document.getElementById("message").style.display = "block";
+}, 3000);
+</script>
+</body>
+</html>
